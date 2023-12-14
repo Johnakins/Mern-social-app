@@ -1,6 +1,9 @@
-const Post = require("../models/Post") 
-const User = require("../models/User") 
-const router = require("express").Router()
+import express from "express"
+import User from "../models/User.js"
+import Post from "../models/Post.js"
+
+
+const router = express.Router()
 
 //create a post
 router.post('/', async (req,res)=>{
@@ -85,4 +88,4 @@ router.get('/timeline/all', async (req,res)=>{
     }
 })
 
-module.exports = router
+export default router
